@@ -1,6 +1,11 @@
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
+/*========= VARIABLES ========*/
+:root {
+    --height-nav: 70px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,4 +22,71 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+}
+
+.nav {
+    background: #143d64;
+    height: var(--height-nav);
+    color: white;
+}
+
+.nav__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.hero__main {
+    display: flex;
+    height: calc(100vh - var(--height-nav));
+    align-items: center;
+    min-height: 500px; /*para que no se rompa el diseño en moviles*/
+}
+
+.hero__texts {
+    flex: 1; /*con flex uno reparte equitativamente el espacio*/
+}
+
+.hero__picture {
+    flex: 1;
+}
+
+.hero__img {
+    width: 100%; /*para que la imagen se adapte a su contenedor, imagen SVG*/
+    max-width: 450px;
+    display: block; /*para centrarlo a tratar del flex-item*/
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(86, 84, 84, 0.5);
+}
+
+.hero__img:hover {
+    box-shadow: 5px 5px 10px rgba(117, 114, 114, 0.8);
+    transition: .3s;
+}
+
+.hero__title {
+    font-size: 3rem;
+}
+
+.hero__paragraph {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.cta {
+    background: #6c63ff;
+    display: inline-flex;
+    padding: 15px 30px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
 }
